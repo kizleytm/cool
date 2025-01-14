@@ -1,4 +1,14 @@
 @echo off
+:: Check if the script is run with administrator privileges
+:: If not, prompt user to run as administrator
+openfiles >nul 2>nul
+if %errorlevel% neq 0 (
+    echo This script requires Administrator privileges to run correctly.
+    echo Please right-click this script and select "Run as administrator".
+    pause
+    exit /b
+)
+
 :: Set the background color to light blue and text color to dark blue for a calm, non-scary look.
 color 87
 
@@ -9,18 +19,19 @@ cls
 echo *** Welcome to Clavish Temp Spoofer ***
 echo.
 echo This tool is designed to enhance your experience.
+echo It will modify serial numbers for your SSD.
 echo.
 echo Press any key to begin...
 pause >nul
 
-:: Start spoofing process (simplified version)
+:: Start spoofing process
 cls
 echo *** Clavish Spoofing Tool ***
 echo.
 echo Initializing...
 echo.
 
-:: Run the spoofing commands
+:: Run the spoofing commands (with elevated privileges)
 mapper.exe "DiskHandler.sys"
 mapper.exe "SMBiosHandler.sys"
 
@@ -30,7 +41,7 @@ echo For support, join us on Discord: discord.gg/clavish
 timeout /t 3 /nobreak >nul
 
 :: Notify the user that the spoofing is complete
-echo Process complete! Your system is now enhanced.
+echo Process complete! Your SSD serials have been modified.
 timeout /t 2 /nobreak >nul
 
 :: Close the script
