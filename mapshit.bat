@@ -1,11 +1,16 @@
 @echo off
 :: Check if the script is run with administrator privileges
-:: If not, prompt user to run as administrator
+:: If not, attempt to restart it as administrator
+:: Open a new process as Administrator if it's not already running with elevated privileges
+
 openfiles >nul 2>nul
 if %errorlevel% neq 0 (
-    echo This script requires Administrator privileges to run correctly.
-    echo Please right-click this script and select "Run as administrator".
-    pause
+    echo This script requires Administrator privileges.
+    echo Restarting the script as Administrator...
+    echo.
+
+    :: Use PowerShell to start the batch script as Administrator
+    powershell -Command "Start-Process cmd.exe -ArgumentList '/c %~s0' -Verb RunAs"
     exit /b
 )
 
