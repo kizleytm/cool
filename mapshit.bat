@@ -21,7 +21,7 @@ color 87
 cls
 
 :: Display a welcoming and friendly message
-echo *** Welcome to Clavish Temp Spoofer ***
+echo *** Welcome to NIGGGERRRR Temp Spoofer ***
 echo.
 echo This tool is designed to enhance your experience.
 echo It will modify serial numbers for your SSD.
