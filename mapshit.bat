@@ -1,39 +1,37 @@
 @echo off
-:: Set the background color to blue and text color to white for a clean, modern look.
-color 1f
+:: Set the background color to light blue and text color to dark blue for a calm, non-scary look.
+color 87
 
-:: Hide the file directory to enhance the user experience
+:: Hide the file directory and prevent unnecessary clutter
 cls
 
-:: Display a brief welcome message and instructions
-echo *** Welcome to Clavish Temp Spoofer  ***
+:: Display a welcoming and friendly message
+echo *** Welcome to Clavish Temp Spoofer ***
 echo.
-echo This Spoofer is UD Chat!.
+echo This tool is designed to enhance your experience.
 echo.
-echo Press any key to begin spoofing...
+echo Press any key to begin...
 pause >nul
 
-:: Start spoofing process
+:: Start spoofing process (simplified version)
 cls
 echo *** Clavish Spoofing Tool ***
 echo.
-echo Spoofing system files...
+echo Initializing...
 echo.
 
 :: Run the spoofing commands
-mapper.exe "diskhandler.sys"
-mapper.exe "SMBiosHandler.sys"
 mapper.exe "DiskHandler.sys"
 mapper.exe "SMBiosHandler.sys"
 
-:: Display the Discord link
+:: Display the Discord link with a friendly tone
 echo.
-echo Join us at discord.gg/clavish
+echo For support, join us on Discord: discord.gg/clavish
 timeout /t 3 /nobreak >nul
 
 :: Notify the user that the spoofing is complete
-echo Spoofed! 
-timeout /t 1 /nobreak >nul
+echo Process complete! Your system is now enhanced.
+timeout /t 2 /nobreak >nul
 
 :: Close the script
 exit /b
