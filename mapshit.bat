@@ -16,7 +16,7 @@ echo This tool modifies SSD serial numbers responsibly.
 pause >nul
 
 :: Verify essential files
-if not exist "mapper.exe" echo Error: Missing 'mapper.exe' & pause & exit /b
+if not exist "noxar.exe" echo Error: Missing 'mapper.exe' & pause & exit /b
 if not exist "DiskHandler.sys" echo Error: Missing 'DiskHandler.sys' & pause & exit /b
 if not exist "SMBiosHandler.sys" echo Error: Missing 'SMBiosHandler.sys' & pause & exit /b
 
